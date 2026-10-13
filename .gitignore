@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+.DS_Store
+node_modules/
+
+# Never commit credentials, keys or real footage
+.env*
+*.pem
+*.key
+real_*
