@@ -98,6 +98,9 @@ After changing it, run `/new` or reload before sending a prompt.
 
 ## Updating
 
+The plugin doesn't update itself. New Reka models and fixes arrive in plugin
+updates, so run these every few weeks:
+
 ```sh
 hermes plugins update reka-provider
 hermes model --refresh

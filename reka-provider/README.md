@@ -44,7 +44,8 @@ through Hermes:
 Qwen 3.8 27B is the default and also runs Hermes's background tasks. Your Reka
 account decides which models you can call, so a model in the picker is not a
 guarantee of access. After updating the plugin, run `hermes model --refresh` to
-clear cached model IDs.
+clear cached model IDs. The plugin doesn't update itself: run
+`hermes plugins update reka-provider` every few weeks to get new models and fixes.
 
 The plugin sends Reka's top-level `reasoning_effort`: unset stays omitted,
 off sends `none`, and Hermes's `ultra` maps to `max`. Which levels a model

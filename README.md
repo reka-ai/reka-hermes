@@ -54,6 +54,21 @@ telemetry or update mechanism. Hermes manages your key; the plugin never reads
 credential files. The installed code is the [`reka-provider`](reka-provider)
 folder.
 
+## Updating
+
+The plugin doesn't update itself, and Hermes doesn't tell you when a new
+version of a plugin installed from GitHub is out. New Reka models and fixes
+arrive in plugin updates, so update every few weeks:
+
+```sh
+hermes plugins update reka-provider
+hermes model --refresh
+```
+
+The refresh clears model IDs that Hermes cached from an earlier version. What
+changed in each release is in [CHANGELOG.md](CHANGELOG.md) and the
+[releases](https://github.com/reka-ai/reka-hermes/releases).
+
 ## Configuration
 
 | Variable | Purpose |
