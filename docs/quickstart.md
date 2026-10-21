@@ -40,8 +40,10 @@ hermes model
 ```
 
 Select **Reka**, enter your key in the masked prompt, and press **Enter** to keep
-`https://api.reka.ai/v1`. Choose **qwen3.8-27b**, then **Disable reasoning** to
-request thinking off. Hermes saves the settings for the active profile.
+`https://api.reka.ai/v1`. Choose **qwen3.8-27b**, then a reasoning effort: how
+much the model thinks before it answers. Higher levels can help with harder
+tasks but reply more slowly and use more tokens; **Disable reasoning** is the
+fastest. Hermes saves the settings for the active profile.
 
 You can now run `hermes chat`. If you prefer the browser controls, follow the
 screenshots below instead of running the model wizard.

@@ -33,7 +33,7 @@ The picker offers five models that support tool calling and have at least the
 | Model | Context window | Image input |
 |---|---:|---|
 | `qwen3.8-27b` (default) | 262,144 | Yes |
-| `glm5.3-flash` | 262,144 | Yes |
+| `glm5.3-flash` | 1,048,576 | Yes |
 | `deepseek4-flash` | 262,144 | No |
 | `deepseek-v4-pro` | 1,048,576 | No |
 | `qwen3.6-27b` | 262,144 | No |

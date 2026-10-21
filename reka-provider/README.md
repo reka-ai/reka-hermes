@@ -13,10 +13,11 @@ hermes model
 
 If the installer asks for `REKA_API_KEY`, press Enter to skip it: that prompt is
 not masked. In `hermes model`, select **Reka**, enter your API key, press Enter to
-keep the default endpoint, choose **qwen3.8-27b**, then select **Disable
-reasoning** for thinking off. Hermes saves the key and model selection for the
-active profile. For a named profile, use `hermes -p PROFILE` for both commands.
-No manual YAML edit is needed.
+keep the default endpoint, choose **qwen3.8-27b**, then pick a reasoning effort.
+Higher levels can help with harder tasks but are slower; **Disable reasoning** is
+the fastest. Hermes saves the key and model selection for the active profile. For
+a named profile, use `hermes -p PROFILE` for both commands. No manual YAML edit is
+needed.
 
 ## Configuration
 
@@ -35,7 +36,7 @@ through Hermes:
 | Model | Context window | Image input |
 |---|---:|---|
 | `qwen3.8-27b` (default) | 262,144 | Yes |
-| `glm5.3-flash` | 262,144 | Yes |
+| `glm5.3-flash` | 1,048,576 | Yes |
 | `deepseek4-flash` | 262,144 | No |
 | `deepseek-v4-pro` | 1,048,576 | No |
 | `qwen3.6-27b` | 262,144 | No |
