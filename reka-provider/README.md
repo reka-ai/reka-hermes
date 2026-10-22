@@ -29,7 +29,7 @@ Hermes reads `REKA_API_KEY` and sends requests to `https://api.reka.ai/v1`.
 hermes chat --provider reka -m qwen3.8-27b
 ```
 
-The picker offers five models that support tool calling, have at least the 64K
+The picker offers six models that support tool calling, have at least the 64K
 tokens of context Hermes needs for an agent turn, and passed a live chat check
 through Hermes:
 
@@ -37,6 +37,7 @@ through Hermes:
 |---|---:|---|
 | `qwen3.8-27b` (default) | 262,144 | Yes |
 | `glm5.3-flash` | 1,048,576 | Yes |
+| `deepseek41-flash-20261017` | 1,048,576 | Yes |
 | `deepseek4-flash` | 262,144 | No |
 | `deepseek-v4-pro` | 1,048,576 | No |
 | `qwen3.6-27b` | 262,144 | No |

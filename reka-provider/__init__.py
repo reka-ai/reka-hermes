@@ -34,7 +34,7 @@ EFFORT_LADDER = ("none", "minimal", "low", "medium", "high", "xhigh", "max", "ul
 REKA_EFFORTS = ("none", "minimal", "low", "medium", "high", "xhigh", "max")
 
 # Models offered in the picker: id -> (context window in tokens, accepts image input).
-# Declared capabilities confirmed via authenticated /v1/models on 2026-10-21;
+# Declared capabilities confirmed via authenticated /v1/models on 2026-10-22;
 # catalog presence does not prove availability. Order sets the preferred picker order
 # and fallback default. Review context and tool support before adding unknown models.
 # A model is added only after it passes a live chat check through Hermes; catalog
@@ -42,6 +42,7 @@ REKA_EFFORTS = ("none", "minimal", "low", "medium", "high", "xhigh", "max")
 MODELS: dict[str, tuple[int, bool]] = {
     "qwen3.8-27b": (262_144, True),
     "glm5.3-flash": (1_048_576, True),
+    "deepseek41-flash-20261017": (1_048_576, True),
     "deepseek4-flash": (262_144, False),
     "deepseek-v4-pro": (1_048_576, False),
     "qwen3.6-27b": (262_144, False),
