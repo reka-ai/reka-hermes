@@ -21,9 +21,8 @@ hermes plugins install "https://github.com/reka-ai/reka-hermes#reka-provider" --
 ```
 
 To pin an exact version, add `--ref` followed by a full 40-character commit SHA
-from this repository. If the installer asks for `REKA_API_KEY`, press **Enter**
-to leave it unset for now; configure it in the next step. The install-time key
-prompt is not masked.
+from this repository. If the installer asks for `REKA_API_KEY`, paste your key
+(the prompt hides it) or press **Enter** to configure it in the next step.
 
 The plugin has no additional runtime dependencies. Confirm it is enabled with:
 

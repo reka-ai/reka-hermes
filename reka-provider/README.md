@@ -11,9 +11,9 @@ hermes plugins install "https://github.com/reka-ai/reka-hermes#reka-provider" --
 hermes model
 ```
 
-If the installer asks for `REKA_API_KEY`, press Enter to skip it: that prompt is
-not masked. In `hermes model`, select **Reka**, enter your API key, press Enter to
-keep the default endpoint, choose **qwen3.8-27b**, then pick a reasoning effort.
+If the installer asks for `REKA_API_KEY`, paste your key (the prompt hides it) or
+press Enter to add it in the next step. In `hermes model`, select **Reka**, enter
+your API key if Hermes asks for it, press Enter to keep the default endpoint, choose **qwen3.8-27b**, then pick a reasoning effort.
 Higher levels can help with harder tasks but are slower; **Disable reasoning** is
 the fastest. Hermes saves the key and model selection for the active profile. For
 a named profile, use `hermes -p PROFILE` for both commands. No manual YAML edit is

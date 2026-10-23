@@ -3,6 +3,13 @@
 Each release is a tagged commit on `main`. Update an installed plugin with
 `hermes plugins update reka-provider`, then run `hermes model --refresh`.
 
+## 1.0.3 (2026-10-23)
+
+- The install-time `REKA_API_KEY` prompt hides the key as you type or paste it:
+  `plugin.yaml` declares the key with `secret: true`, plus a description and a
+  link to https://developer.reka.ai/keys. Supported since Hermes 0.21.6, the
+  plugin's minimum version. No change to the provider code.
+
 ## 1.0.2 (2026-10-22)
 
 - New model: `deepseek41-flash-20261017` (DeepSeek V4.1 Flash 1017), with a
