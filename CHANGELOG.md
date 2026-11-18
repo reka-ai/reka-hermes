@@ -3,6 +3,23 @@
 Each release is a tagged commit on `main`. Update an installed plugin with
 `hermes plugins update reka-provider`, then run `hermes model --refresh`.
 
+## 1.0.4 (2026-11-18)
+
+- Models follow Reka's retirements, so the picker offers five models:
+  - `deepseek41-flash` (DeepSeek V4.1 Flash) replaces `deepseek41-flash-20261017`,
+    which Reka retired on 2026-11-16. Same 1,048,576-token context window and
+    image input.
+  - `deepseek-v4-pro` is removed. Reka no longer serves it.
+  - Both old IDs now get HTTP 404 `Unknown chat model` from Reka. If your
+    default model is one of them, run `hermes model --refresh`, then
+    `hermes model`, and choose a listed model.
+- The README (also shown on the
+  Hermes plugin catalog page) and the quickstart lead with the catalog install,
+  `hermes plugins install reka-provider --enable` (Hermes 0.22.3 or later). They
+  keep the GitHub install for Hermes 0.21.6 to 0.22.2 and explain how to switch
+  a GitHub install to the catalog copy. They also explain that Enter at
+  `hermes model`'s `REKA_API_KEY (or Enter to cancel):` prompt cancels.
+
 ## 1.0.3 (2026-10-23)
 
 - The install-time `REKA_API_KEY` prompt hides the key as you type or paste it:

@@ -6,7 +6,7 @@ You do not need an OpenRouter account or a separate Reka software development
 kit (SDK).
 
 You need **Hermes 0.21.6 or later** and an API key from
-[Reka's developer portal](https://developer.reka.ai).
+[Reka's developer portal](https://developer.reka.ai/keys).
 
 The screenshots show Hermes v0.21.7. The key visible in them is a dummy example.
 
@@ -16,13 +16,20 @@ Use the same profile for installation, key entry, and chat. To keep a separate
 profile, create it first with `hermes profile create reka-demo --no-alias`, then
 use `hermes -p reka-demo` in place of `hermes` throughout this guide.
 
+On Hermes 0.22.3 or later, install from the Hermes plugin catalog by name:
+
+```sh
+hermes plugins install reka-provider --enable
+```
+
+On Hermes 0.21.6 to 0.22.2, install the same plugin from GitHub instead:
+
 ```sh
 hermes plugins install "https://github.com/reka-ai/reka-hermes#reka-provider" --enable
 ```
 
-To pin an exact version, add `--ref` followed by a full 40-character commit SHA
-from this repository. If the installer asks for `REKA_API_KEY`, paste your key
-(the prompt hides it) or press **Enter** to configure it in the next step.
+If the installer asks for `REKA_API_KEY`, paste your key (the prompt hides it)
+and press **Enter**, or press **Enter** alone to add it in the next step.
 
 The plugin has no additional runtime dependencies. Confirm it is enabled with:
 
@@ -38,8 +45,9 @@ hermes plugins list
 hermes model
 ```
 
-Select **Reka**, enter your key in the masked prompt, and press **Enter** to keep
-`https://api.reka.ai/v1`. Choose **qwen3.8-27b**, then a reasoning effort: how
+Select **Reka**. If you added the key at install, press **Enter** to keep it;
+if not, paste it when Hermes asks `REKA_API_KEY (or Enter to cancel):`, because
+**Enter** there cancels. Press **Enter** to keep `https://api.reka.ai/v1`. Choose **qwen3.8-27b**, then a reasoning effort: how
 much the model thinks before it answers. Higher levels can help with harder
 tasks but reply more slowly and use more tokens; **Disable reasoning** is the
 fastest. Hermes saves the settings for the active profile.
@@ -113,7 +121,7 @@ The refresh clears model IDs that Hermes cached from an earlier version.
 |---|---|
 | Reka is missing, or old models appear | Run `hermes plugins list` in the same profile as the dashboard. Reload Hermes, then use **Refresh Models** in the picker or `hermes model --refresh` to clear a stale model cache. |
 | HTTP 401 or 403 | Check the profile's Reka key. A 403 can also mean insufficient balance. |
-| HTTP 404 | Use a Reka model ID such as `qwen3.8-27b`, not an OpenRouter-style ID such as `qwen/qwen3.8-27b`. The model may also not be enabled for your account. |
+| HTTP 404 | Use a Reka model ID such as `qwen3.8-27b`, not an OpenRouter-style ID such as `qwen/qwen3.8-27b`. `Unknown chat model` means Reka has retired that ID: run `hermes plugins update reka-provider`, then `hermes model` and choose a listed model. The model may also not be enabled for your account. |
 | HTTP 429 | Wait before retrying; this means a rate or capacity limit. |
 
 A saved key or a model in the picker does not prove your account can call that
